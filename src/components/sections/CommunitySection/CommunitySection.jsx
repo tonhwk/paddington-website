@@ -1,4 +1,5 @@
 import Card from '../../ui/Card'
+import Icons from '../../ui/Icons'
 import { COMMUNITY_STATS, SOCIAL_LINKS } from '../../../constants'
 
 const CommunitySection = () => {
@@ -19,19 +20,28 @@ const CommunitySection = () => {
         </div>
         
         <div className="social-links-grid">
-          {SOCIAL_LINKS.map((social) => (
-            <Card 
-              key={social.id} 
-              as="a" 
-              href={social.href}
-              hover 
-              className="social-card"
-            >
-              <div className="social-header">{social.shortLabel}</div>
-              <h4 className="social-title">{social.label}</h4>
-              <p className="social-description">{social.description}</p>
-            </Card>
-          ))}
+          {SOCIAL_LINKS.map((social) => {
+            const IconComponent = Icons[social.icon]
+            return (
+              <Card 
+                key={social.id} 
+                as="a" 
+                href={social.href}
+                hover 
+                className="social-card"
+              >
+                <div className="social-header">
+                  {IconComponent ? (
+                    <IconComponent size={24} />
+                  ) : (
+                    <Icons.TwitterX size={24} />
+                  )}
+                </div>
+                <h4 className="social-title">{social.label}</h4>
+                <p className="social-description">{social.description}</p>
+              </Card>
+            )
+          })}
         </div>
       </div>
     </section>

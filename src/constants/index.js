@@ -16,14 +16,16 @@ export const SOCIAL_LINKS = [
     label: 'Twitter/X',
     description: 'Follow @DrClownPhD for premium bear content',
     href: 'https://x.com/DrClownPhD',
-    shortLabel: 'X'
+    shortLabel: 'X',
+    icon: 'TwitterX'
   },
   {
     id: 'dexscreener',
     label: 'DEXScreener',
     description: 'Watch the hard stare price action',
     href: 'https://dexscreener.com/solana/4v3nfncoadbkmppnucympwt2n2qfucyekis5lmbfy5rd',
-    shortLabel: 'DEX'
+    shortLabel: 'DEX',
+    icon: 'DEXScreener'
   }
 ]
 
