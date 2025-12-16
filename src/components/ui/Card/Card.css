@@ -1,0 +1,83 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-light);
+  transition: all var(--transition-normal);
+}
+
+/* Variants */
+.card--default {
+  /* Default styling already applied above */
+}
+
+.card--primary {
+  border-left: 4px solid var(--accent-gold);
+}
+
+.card--accent {
+  background: var(--accent-gold);
+  color: var(--primary-navy);
+  border-color: var(--accent-gold);
+}
+
+.card--outlined {
+  background: transparent;
+  border: 2px solid var(--border-primary);
+}
+
+.card--ghost {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+/* Sizes */
+.card--sm {
+  padding: var(--spacing-md);
+}
+
+.card--md {
+  padding: var(--spacing-xl);
+}
+
+.card--lg {
+  padding: var(--spacing-2xl);
+}
+
+.card--xl {
+  padding: var(--spacing-3xl);
+}
+
+/* Hover Effects */
+.card--hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--border-hover);
+}
+
+.card--hover.card--default:hover {
+  background: var(--bg-card-hover);
+}
+
+/* Special variants */
+.card--meme {
+  overflow: hidden;
+  text-align: center;
+}
+
+.card--meme:hover {
+  transform: translateY(-8px) rotate(1deg);
+  box-shadow: var(--shadow-heavy);
+}
+
+.card--social {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.card--social:hover {
+  color: inherit;
+  text-decoration: none;
+}
