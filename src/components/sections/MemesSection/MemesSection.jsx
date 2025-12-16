@@ -1,4 +1,5 @@
 import Card from '../../ui/Card'
+import MemeImage from '../../ui/MemeImage'
 import { MEMES_DATA } from '../../../constants'
 
 const MemesSection = () => {
@@ -13,11 +14,13 @@ const MemesSection = () => {
         <div className="grid grid--4">
           {MEMES_DATA.map((meme) => (
             <Card key={meme.id} variant="default" hover className="meme-card">
-              <div className="meme-placeholder">
-                <p className="meme-quote">"{meme.quote}"</p>
-                <small className="meme-id">PADDINGTON MEME #{String(meme.id).padStart(3, '0')}</small>
-              </div>
-              <h4 className="meme-title">{meme.title}</h4>
+              <MemeImage
+                src={meme.image}
+                alt={`Paddington meme: ${meme.title}`}
+                quote={meme.quote}
+                title={meme.title}
+                memeId={meme.id}
+              />
             </Card>
           ))}
         </div>

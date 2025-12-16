@@ -12,14 +12,14 @@ export const SOCIAL_LINKS = [
     id: 'twitter',
     label: 'Twitter/X',
     description: 'Follow @DrClownPhD for premium bear content',
-    href: '#',
+    href: 'https://x.com/DrClownPhD',
     shortLabel: 'X'
   },
   {
     id: 'dexscreener',
     label: 'DEXScreener',
     description: 'Watch the hard stare price action',
-    href: '#',
+    href: 'https://dexscreener.com/solana/4v3nfncoadbkmppnucympwt2n2qfucyekis5lmbfy5rd',
     shortLabel: 'DEX'
   }
 ]
@@ -32,18 +32,18 @@ export const TOKENOMICS_DATA = [
   },
   {
     title: 'Liquidity',
-    value: '90% Locked',
+    value: '100% Locked',
     description: '"Safer than marmalade in a bear-proof jar"'
   },
   {
-    title: 'Marketing',
-    value: '5% for Memes',
-    description: '"Quality hard stares don\'t fund themselves"'
+    title: 'Creator Rewards',
+    value: 'Pump Fun Fees!',
+    description: 'Redirected to Dr Clown Phd are used to boost, create content and keep spreading the narrative. Fuck the EU!'
   },
   {
     title: 'Development',
     value: '5% for Progress',
-    description: '"Even bears need to eat (marmalade)"'
+    description: 'Bear with us for all the things to come!'
   }
 ]
 
@@ -51,22 +51,26 @@ export const MEMES_DATA = [
   {
     id: 1,
     quote: '"This is not normal"',
-    title: 'Immigration Reality Check'
+    title: 'Immigration Reality Check',
+    image: "/src/assets/images/memes/meme1.jpg" // Add your image: "/src/assets/images/memes/meme1.jpg"
   },
   {
     id: 2,
     quote: '"*HARD STARE*"',
-    title: 'EU Regulation Overload'
+    title: 'EU Regulation Overload',
+    image: "/src/assets/images/memes/meme2.jpg" // Add your image: "/src/assets/images/memes/meme2.jpg"
   },
   {
     id: 3,
     quote: '"Aunt Lucy didn\'t prepare me for this"',
-    title: 'Cultural Confusion'
+    title: 'Cultural Confusion',
+    image: "/src/assets/images/memes/meme3.jpg" // Add your image: "/src/assets/images/memes/meme3.jpg"
   },
   {
     id: 4,
     quote: '"Whiskers, we\'re not in London anymore"',
-    title: 'Modern Absurdities'
+    title: 'Modern Absurdities',
+    image: "/src/assets/images/memes/meme4.jpg" // Add your image: "/src/assets/images/memes/meme4.jpg"
   }
 ]
 

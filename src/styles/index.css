@@ -10,6 +10,8 @@
 @import '../components/ui/Button/Button.css';
 @import '../components/ui/Card/Card.css';
 @import '../components/ui/ContractAddress/ContractAddress.css';
+@import '../components/ui/HeroImage/HeroImage.css';
+@import '../components/ui/MemeImage/MemeImage.css';
 
 /* Section Components */
 @import '../components/sections/HeroSection/HeroSection.css';

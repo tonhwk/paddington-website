@@ -1,0 +1,118 @@
+.meme-image {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  height: 100%;
+}
+
+.meme-image__container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: var(--surface-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.meme-image__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.meme-image__container:hover .meme-image__img {
+  transform: scale(1.05);
+}
+
+.meme-image__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--spacing-md);
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+  color: var(--text-light);
+}
+
+.meme-image__quote {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+  color: var(--accent-gold);
+  text-align: center;
+}
+
+.meme-image__id {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+}
+
+.meme-image__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(26, 35, 50, 0.9));
+  padding: var(--spacing-md);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.meme-image__container:hover .meme-image__overlay {
+  transform: translateY(0);
+}
+
+.meme-image__overlay .meme-image__quote {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  color: var(--text-light);
+}
+
+.meme-image__title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 var(--spacing-xs);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .meme-image__placeholder {
+    padding: var(--spacing-sm);
+  }
+  
+  .meme-image__quote {
+    font-size: 0.8rem;
+  }
+  
+  .meme-image__id {
+    font-size: 0.6rem;
+  }
+  
+  .meme-image__title {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .meme-image__quote {
+    font-size: 0.7rem;
+  }
+  
+  .meme-image__title {
+    font-size: 0.75rem;
+  }
+}
