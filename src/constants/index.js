@@ -1,10 +1,13 @@
 export const CONTRACT_ADDRESS = '8ATdT54hjD61uoevjs2WNVDGmmTiLSeEoDRXQrQGpump'
 
 export const NAVIGATION_LINKS = [
-  { href: '#lore', label: 'The Lore' },
-  { href: '#memes', label: 'Gallery' },
-  { href: '#token', label: 'Tokenomics' },
-  { href: '#community', label: 'Community' }
+  { href: '#lore', label: 'The Lore', locked: false },
+  { href: '#memes', label: 'Gallery', locked: false },
+  { href: '#token', label: 'Tokenomics', locked: false },
+  { href: '#community', label: 'Community', locked: false },
+  { href: '#nfts', label: 'NFTs', locked: true },
+  { href: '#game', label: 'Game', locked: true },
+  { href: '#merch', label: 'Merch', locked: true }
 ]
 
 export const SOCIAL_LINKS = [

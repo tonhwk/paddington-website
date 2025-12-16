@@ -18,13 +18,26 @@ const Header = () => {
         
         <div className={`nav-links ${isMenuOpen ? 'nav-links--open' : ''}`}>
           {NAVIGATION_LINKS.map((link) => (
-            <a 
-              key={link.href} 
-              href={link.href}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <span>{link.label}</span>
-            </a>
+            link.locked ? (
+              <div 
+                key={link.href}
+                className="nav-link nav-link--locked"
+                title="Coming Soon"
+              >
+                <Icons.Lock size={14} />
+                <span>{link.label}</span>
+                <span className="nav-link__status">Coming Soon</span>
+              </div>
+            ) : (
+              <a 
+                key={link.href} 
+                href={link.href}
+                className="nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span>{link.label}</span>
+              </a>
+            )
           ))}
         </div>
 
