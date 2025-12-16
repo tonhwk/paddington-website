@@ -57,7 +57,7 @@ const HeroSection = () => {
       
       <div className="hero-visual">
         <HeroImage
-          src={"/src/assets/images/hero/podcast.jpg"} // User can replace with their image path like: "/src/assets/images/hero/paddington.jpg"
+          src={"/images/hero/podcast.jpg"}
           alt="Paddington Bear giving his famous hard stare"
           caption="*HARD STARE INTENSIFIES*"
         />

@@ -52,25 +52,25 @@ export const MEMES_DATA = [
     id: 1,
     quote: '"This is not normal"',
     title: 'Immigration Reality Check',
-    image: "/src/assets/images/memes/meme1.jpg" // Add your image: "/src/assets/images/memes/meme1.jpg"
+    image: "/images/memes/meme1.jpg"
   },
   {
     id: 2,
     quote: '"*HARD STARE*"',
     title: 'EU Regulation Overload',
-    image: "/src/assets/images/memes/meme2.jpg" // Add your image: "/src/assets/images/memes/meme2.jpg"
+    image: "/images/memes/meme2.jpg"
   },
   {
     id: 3,
     quote: '"Aunt Lucy didn\'t prepare me for this"',
     title: 'Cultural Confusion',
-    image: "/src/assets/images/memes/meme3.jpg" // Add your image: "/src/assets/images/memes/meme3.jpg"
+    image: "/images/memes/meme3.jpg"
   },
   {
     id: 4,
     quote: '"Whiskers, we\'re not in London anymore"',
     title: 'Modern Absurdities',
-    image: "/src/assets/images/memes/meme4.jpg" // Add your image: "/src/assets/images/memes/meme4.jpg"
+    image: "/images/memes/meme4.jpg"
   }
 ]
 
