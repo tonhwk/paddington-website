@@ -1,7 +1,7 @@
 export const CONTRACT_ADDRESS = '8ATdT54hjD61uoevjs2WNVDGmmTiLSeEoDRXQrQGpump'
 
 export const NAVIGATION_LINKS = [
-  { href: '#lore', label: 'The Lore', locked: false },
+  { href: '#lore', label: 'Lore', locked: false },
   { href: '#memes', label: 'Gallery', locked: false },
   { href: '#token', label: 'Tokenomics', locked: false },
   { href: '#community', label: 'Community', locked: false },
@@ -55,25 +55,25 @@ export const TOKENOMICS_DATA = [
 export const MEMES_DATA = [
   {
     id: 1,
-    quote: '"This is not normal"',
+    quote: 'This is not normal',
     title: 'Immigration Reality Check',
     image: "/images/memes/meme1.jpg"
   },
   {
     id: 2,
-    quote: '"*HARD STARE*"',
+    quote: 'HARD STARE',
     title: 'EU Regulation Overload',
     image: "/images/memes/meme2.jpg"
   },
   {
     id: 3,
-    quote: '"Aunt Lucy didn\'t prepare me for this"',
+    quote: 'Aunt Lucy didn\'t prepare me for this',
     title: 'Cultural Confusion',
     image: "/images/memes/meme3.jpg"
   },
   {
     id: 4,
-    quote: '"Whiskers, we\'re not in London anymore"',
+    quote: 'Whiskers, we\'re not in London anymore',
     title: 'Modern Absurdities',
     image: "/images/memes/meme4.jpg"
   }
