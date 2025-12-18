@@ -12,6 +12,7 @@
 @import '../components/ui/ContractAddress/ContractAddress.css';
 @import '../components/ui/HeroImage/HeroImage.css';
 @import '../components/ui/MemeImage/MemeImage.css';
+@import '../components/ui/AudioPlayer/AudioPlayer.css';
 
 /* Section Components */
 @import '../components/sections/HeroSection/HeroSection.css';

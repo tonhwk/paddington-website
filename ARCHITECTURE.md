@@ -72,6 +72,9 @@ src/
 - `Card` - Container component with multiple styles
 - `ContractAddress` - Specialized contract display
 - `Icons` - SVG icon library
+- `HeroImage` - Hero section image display with fallbacks
+- `MemeImage` - Meme gallery image component
+- `AudioPlayer` - Floating audio player with playlist support
 
 ## 🎨 Styling System
 
@@ -217,12 +220,95 @@ To switch to the new architecture:
 3. Test each section individually
 4. Extend remaining placeholder sections as needed
 
+## 🎵 Audio System Architecture
+
+### AudioPlayer Component (`/components/ui/AudioPlayer/`)
+**Purpose**: Background audio experience with user interaction compliance
+
+#### Features:
+- **Floating Mini-Player**: Fixed position, bottom-right corner
+- **Playlist Management**: Auto-advance through audio tracks
+- **User Interaction Prompt**: Complies with browser autoplay policies
+- **Volume & Progress Controls**: Essential playback controls
+- **Responsive Design**: Adapts to mobile screens
+
+#### File Structure:
+```
+components/ui/AudioPlayer/
+├── AudioPlayer.jsx          # Main player component
+├── AudioPlayer.css          # Player styling
+├── AudioControls.jsx        # Play/pause/next/volume controls
+├── AudioProgress.jsx        # Progress bar component
+├── AudioPrompt.jsx          # Initial user interaction prompt
+└── index.js                 # Export barrel
+```
+
+#### Audio Assets:
+```
+public/audio/
+├── playlist.json           # Playlist configuration
+├── track1.mp3             # Audio files
+├── track2.mp3
+└── ambient-loop.mp3
+```
+
+#### Constants:
+```javascript
+// constants/audio.js
+export const AUDIO_PLAYLIST = [
+  {
+    id: 1,
+    title: "Hard Stare Theme",
+    src: "/audio/hard-stare-theme.mp3",
+    duration: 180
+  },
+  {
+    id: 2, 
+    title: "Paddington's Reflection",
+    src: "/audio/paddington-reflection.mp3",
+    duration: 240
+  }
+]
+
+export const AUDIO_CONFIG = {
+  autoPlay: false,           // Browser compliance
+  loop: true,               // Loop entire playlist
+  volume: 0.3,              // Default volume
+  fadeInDuration: 2000      // Smooth start
+}
+```
+
+#### Usage:
+```javascript
+// App.jsx
+import AudioPlayer from './components/ui/AudioPlayer'
+
+function App() {
+  return (
+    <div className="App">
+      {/* Main content */}
+      <AudioPlayer />  {/* Floating player */}
+    </div>
+  )
+}
+```
+
+### Browser Compliance Strategy:
+1. **Initial State**: Player shows "Enable Audio Experience" prompt
+2. **User Interaction**: Click starts audio with smooth fade-in
+3. **Playlist Advance**: Auto-advance between tracks
+4. **Memory**: Remembers user preference (localStorage)
+
 ## 🎯 Next Steps
 
-1. Complete the remaining section components (Memes, Token, Community)
-2. Add TypeScript for better type safety
-3. Implement proper error boundaries
-4. Add component testing
-5. Consider adding a theme context for dynamic theming
+1. ✅ Complete audio system architecture documentation
+2. Implement AudioPlayer component with user interaction prompt
+3. Create playlist management system
+4. Add smooth transitions and animations
+5. Test cross-browser audio compatibility
+6. Add TypeScript for better type safety
+7. Implement proper error boundaries
+8. Add component testing
+9. Consider adding a theme context for dynamic theming
 
 This architecture provides a solid foundation for scaling the $PADDINGTON website while maintaining code quality and developer productivity.
